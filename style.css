@@ -30,13 +30,13 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .carrossel img {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
@@ -82,6 +82,6 @@ button:hover {
 
   .mensagem {
     padding: 20px;
-    font-size: 1rem;
+    font-size: 2rem;
   }
 }
