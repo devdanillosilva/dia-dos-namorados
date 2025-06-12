@@ -1,52 +1,43 @@
 /* style.css */
 body {
   margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #ffd6e8, #ffeaea);
-  text-align: center;
-  color: #d6336c;
-}
-
-.container {
-  padding: 30px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 20px;
+  color: #d6336c;
 }
 
-.mensagem {
-  font-size: 1.2em;
-  margin-bottom: 30px;
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 1000px;
+  padding: 20px;
 }
 
-.carrossel {
-  max-width: 90%;
-  margin: 0 auto 20px;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.carrossel img {
+.gallery img {
   width: 100%;
+  max-width: 300px;
   height: auto;
-  transition: opacity 1s ease-in-out;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 1em;
-  background: #d6336c;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.gallery img:hover {
+  transform: scale(1.03);
 }
 
-button:hover {
-  background: #b72c5c;
+audio {
+  margin: 20px 0;
+  width: 90%;
+  max-width: 400px;
 }
