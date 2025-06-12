@@ -1,33 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dia dos Namorados 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Dia dos Namorados 💖</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .mensagem {
+      font-size: 1.1rem;
+      color: #6b0d44;
+      text-align: center;
+      margin: 20px;
+      max-width: 700px;
+      line-height: 1.7;
+      background-color: #fff0f5;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .carrossel img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 600px) {
+      .carrossel img {
+        max-width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Música no canto superior esquerdo -->
-  <audio id="musica" autoplay loop>
-    <source src="music/musica.mp3" type="audio/mpeg" />
-    Seu navegador não suporta áudio.
-  </audio>
+  <div class="container">
+    <h1>Feliz Dia dos Namorados 💘</h1>
 
-  <h1>Feliz Dia dos Namorados 💘</h1>
+    <p class="mensagem">
+      Não apenas para comemorar mais um dia dos namorados juntos, mas para te dizer o quanto que é bom viver a vida com você.<br><br>
+      Obrigado por compartilhar comigo todos esses momentos incríveis e por me fazer o cara mais feliz do mundo.<br><br>
+      <strong>Feliz dia dos namorados. Eu te amo ❤️</strong>
+    </p>
 
-  <!-- Mensagem romântica -->
-  <p class="mensagem">
-    Não apenas para comemorar mais um Dia dos Namorados juntos, mas para te dizer o quanto que é bom viver a vida com você.<br><br>
-    Obrigado por compartilhar comigo todos esses momentos incríveis e por me fazer o cara mais feliz do mundo.<br><br>
-    <strong>Feliz Dia dos Namorados. Eu te amo ❤️</strong>
-  </p>
-
-  <!-- Galeria centralizada com fotos lado a lado -->
-  <div class="carrossel">
+    <div class="carrossel">
       <img id="foto" src="images/foto1.jpg" alt="Foto romântica" />
     </div>
 
-  <button id="toggleMusic">🔊 Pausar Música</button>
+    <button id="toggleMusic">🔊 Pausar Música</button>
     <audio id="musica" autoplay loop>
       <source src="music/musica.mp3" type="audio/mpeg" />
       Seu navegador não suporta áudio.
@@ -37,3 +63,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
