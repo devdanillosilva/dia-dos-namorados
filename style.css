@@ -1,0 +1,52 @@
+/* style.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffd6e8, #ffeaea);
+  text-align: center;
+  color: #d6336c;
+}
+
+.container {
+  padding: 30px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.mensagem {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.carrossel {
+  max-width: 90%;
+  margin: 0 auto 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.carrossel img {
+  width: 100%;
+  height: auto;
+  transition: opacity 1s ease-in-out;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background: #d6336c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+button:hover {
+  background: #b72c5c;
+}
