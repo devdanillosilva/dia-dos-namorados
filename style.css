@@ -6,7 +6,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
 }
 
 h1 {
@@ -16,20 +15,47 @@ h1 {
   font-size: 2rem;
 }
 
-audio {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 180px;
-  opacity: 0.9;
-  z-index: 999;
+.container {
+  padding: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.carrossel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.carrossel img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background: #d6336c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background: #b72c5c;
 }
 
 .mensagem {
   font-size: 1.1rem;
   color: #6b0d44;
   text-align: center;
-  margin: 20px;
+  margin: 20px auto;
   max-width: 700px;
   line-height: 1.7;
   background-color: #fff0f5;
@@ -44,23 +70,13 @@ audio {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  max-width: 90%;
-  padding: 20px;
-}
+@media (max-width: 600px) {
+  .carrossel img {
+    max-width: 90%;
+  }
 
-.gallery img {
-  width: 250px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.03);
+  .mensagem {
+    padding: 15px;
+    font-size: 1rem;
+  }
 }
