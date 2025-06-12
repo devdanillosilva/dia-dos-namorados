@@ -7,24 +7,39 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Feliz Dia dos Namorados 💘</h1>
-  <p class="mensagem">
-  Não apenas para comemorar mais um Dia dos Namorados juntos, mas para te dizer o quanto que é bom viver a vida com você.<br><br>
-  Obrigado por compartilhar comigo todos esses momentos incríveis e por me fazer o cara mais feliz do mundo.<br><br>
-  <strong>Feliz Dia dos Namorados. Eu te amo ❤️</strong>
-</p>
-  <div class="gallery">
-    <img src="images/foto1.jpg" alt="Foto 1" />
-    <img src="images/foto2.jpg" alt="Foto 2" />
-    <img src="images/foto3.jpg" alt="Foto 3" />
-    <!-- adicione quantas quiser -->
-  </div>
-
-  <audio controls autoplay loop>
+  <!-- Música no canto superior esquerdo -->
+  <audio id="musica" autoplay loop>
     <source src="music/musica.mp3" type="audio/mpeg" />
     Seu navegador não suporta áudio.
   </audio>
 
-  <script src="script.js"></script>
+  <h1>Feliz Dia dos Namorados 💘</h1>
+
+  <!-- Mensagem romântica -->
+  <p class="mensagem">
+    Não apenas para comemorar mais um Dia dos Namorados juntos, mas para te dizer o quanto que é bom viver a vida com você.<br><br>
+    Obrigado por compartilhar comigo todos esses momentos incríveis e por me fazer o cara mais feliz do mundo.<br><br>
+    <strong>Feliz Dia dos Namorados. Eu te amo ❤️</strong>
+  </p>
+
+  <!-- Galeria centralizada com fotos lado a lado -->
+  <div class="gallery">
+    <img src="images/foto1.jpg" alt="Foto 1" />
+    <img src="images/foto2.jpg" alt="Foto 2" />
+    <img src="images/foto3.jpg" alt="Foto 3" />
+    <!-- Adicione mais imagens conforme necessário -->
+  </div>
+
+  <script>
+    // Tenta forçar autoplay mesmo em navegadores mais restritivos
+    window.addEventListener('load', () => {
+      const audio = document.getElementById('musica');
+      audio.volume = 0.5;
+      audio.play().catch(() => {
+        // fallback se autoplay for bloqueado
+        console.log('Autoplay bloqueado pelo navegador.');
+      });
+    });
+  </script>
 </body>
 </html>
