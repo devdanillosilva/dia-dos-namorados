@@ -2,44 +2,27 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #f9f1f1;
+  background-color: #fef6f8;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 h1 {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
   color: #d6336c;
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  max-width: 1000px;
-  padding: 20px;
-}
-
-.gallery img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.03);
+  font-size: 2rem;
 }
 
 audio {
-  margin: 20px 0;
-  width: 90%;
-  max-width: 400px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 180px;
+  opacity: 0.9;
+  z-index: 999;
 }
 
 .mensagem {
@@ -59,4 +42,25 @@ audio {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 90%;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 250px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
 }
