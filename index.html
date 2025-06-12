@@ -27,16 +27,13 @@
       <img id="foto" src="images/foto1.jpg" alt="Foto romântica" />
     </div>
 
-  <script>
-    // Tenta forçar autoplay mesmo em navegadores mais restritivos
-    window.addEventListener('load', () => {
-      const audio = document.getElementById('musica');
-      audio.volume = 0.5;
-      audio.play().catch(() => {
-        // fallback se autoplay for bloqueado
-        console.log('Autoplay bloqueado pelo navegador.');
-      });
-    });
-  </script>
+  <button id="toggleMusic">🔊 Pausar Música</button>
+    <audio id="musica" autoplay loop>
+      <source src="music/musica.mp3" type="audio/mpeg" />
+      Seu navegador não suporta áudio.
+    </audio>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
